@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pyinput"
+version = "0.1.0"
+description = "Get user input with validation"
+authors = ["Michael Lane <mikelane@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest-common-subject = "^1.0"
+flit = "^1.3"
+black = {version = "=19.3b0", allows-prereleases = true}
+mypy = "^0.720.0"
+
+[tool.black]
+line-length = 110
+target_version = ['py37']
+skip-string-normalization = true
+
+[tool.flit.metadata]
+module = "pyinput"
+author = "Michael Lane"
+author-email = "mikelane@gmail.com"
+home-page = "https://github.com/mikelane"
+
+[build-system]
+requires = ["poetry>=0.12", "flit"]
+build-backend = "poetry.masonry.api"
